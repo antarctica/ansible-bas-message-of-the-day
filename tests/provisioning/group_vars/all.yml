@@ -1,0 +1,6 @@
+---
+# These variables override those defined by roles
+
+# Generic
+project_hostname_project: "bas-motd"
+project_repository: "git@github.com:antarctica/ansible-bas-message-of-the-day.git"

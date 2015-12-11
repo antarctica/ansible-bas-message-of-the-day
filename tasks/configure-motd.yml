@@ -1,0 +1,25 @@
+---
+# Creates a standardised Message Of The Day (MOTD) with OS and BAS Systems Inventory information
+
+- name: remove unwanted default message of the day elements - Ubuntu
+  file:
+     path="/etc/update-motd.d/{{ item }}"
+    state=absent
+  with_items:
+    - "00-header"
+    - "10-help-text"
+  when: ansible_distribution == "Ubuntu"
+
+- name: create custom message of the day element - Ubuntu
+  template:
+     src=etc/update-motd.d/10-bas-header
+    dest=/etc/update-motd.d/10-bas-header
+    mode=0755
+  when: ansible_distribution == "Ubuntu"
+
+- name: create custom message of the day - CentOS
+  template:
+     src=etc/motd.j2
+    dest=/etc/motd
+    mode=0755
+  when: ansible_distribution == "CentOS"

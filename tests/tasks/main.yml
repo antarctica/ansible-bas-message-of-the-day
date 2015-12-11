@@ -1,0 +1,5 @@
+---
+# Tests the changes to a machines message of the day made by this role
+
+# There are no automated tests for this role as reading the 'Message Of The Day' from within Ansible is not trivial.
+# Therefore manual verification is required by logging into each test machine.

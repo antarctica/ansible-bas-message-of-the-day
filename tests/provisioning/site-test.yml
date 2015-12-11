@@ -1,0 +1,25 @@
+---
+# Setup infrastructure for testing role
+
+# Apply role to test VMs,
+# host-vars are used to control which features of the role are applied to each VM.
+# For each test a set of tasks will be run to check the selected features of roles are correctly applied.
+
+# There are no automated tests for this role as reading the 'Message Of The Day' from within Ansible is not trivial.
+# Therefore manual verification is required by logging into each test machine.
+
+# Normally the 'motd_information_systems_inventory_identifer' variable would be set as a host_var or inventory variable
+
+- name: setup the bas message of the day role
+  hosts: bas-motd-test-nodes
+  remote_user: controller
+  become: yes
+  vars:
+    - motd_information_systems_inventory_identifer: BASSYS-X
+  vars_files:
+    - "group_vars/bas-webapps-defaults.yml"
+    - "group_vars/BAS-webapps-{{ ansible_distribution }}-defaults.yml"
+  roles:
+    - ../../../motd
+  tasks:
+    - include: ../tasks/main.yml

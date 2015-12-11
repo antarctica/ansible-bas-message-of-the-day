@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  author: Felix Fennell
+  description: Configures the message of the day shown when logging into a machine
+  company: British Antarctic Survey
+
+  issue_tracker_url: https://jira.ceh.ac.uk/browse/BASWEB
+  license: MIT
+  min_ansible_version: 1.8
+
+  platforms:
+  - name: EL
+    versions:
+      - 7
+  - name: Ubuntu
+    versions:
+      - trusty
+
+  categories:
+  - system
+
+dependencies: []

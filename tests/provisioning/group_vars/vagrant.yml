@@ -1,0 +1,5 @@
+---
+
+# BAS message of the day
+motd_information_infrastructure_provider: "{{ ansible_virtualization_type | default(omit) }}"
+motd_information_infrastructure_manager: Vagrant
