@@ -2,21 +2,25 @@
 
 Configures the message of the day shown when logging into a machine
 
-## Overview
-
-* Replaces the default message of the day with a custom value containing information on the infrastructure, operating 
-system, operating system image and identifier in the BAS Systems Inventory for the machine
-* Retains information on the last login
-* On Ubuntu machines, retains system update notices
+**This role is developed outside of the BAS Ansible Roles Collection**
 
 ### Intended Audience
 
 This role is designed to meet the needs of BAS projects only, it is not intended to be a generic role.
 Consequently this role may not suit the needs of other users or teams. This is not considered a limitation.
 
-BAS also produces a number of roles, which are intended to be generic, within the BAS Ansible Roles Collection (BARC).
-See [here](https://galaxy.ansible.com/detail#/user/18670) for available roles, 
+This role is made available publicly to ease distribution and under our commitment to open sourcing software wherever
+possible.
+
+BAS also produces a number of roles, which are intended to be generic, under the BAS Ansible Roles Collection (BARC).
+See [here](https://galaxy.ansible.com/BARC/) for available roles, 
 and [here](https://antarctica.hackpad.com/BARC-Overview-and-Policies-SzcHzHvitkt) for a general overview and policies.
+
+## Overview
+
+* Replaces the default message of the day with a custom value containing information on the infrastructure, operating 
+system, operating system image and Compute Resource identifier in the BAS Systems Inventory for the machine
+* On Ubuntu machines, retains system update notices
 
 ## Quality Assurance
 
