@@ -19,4 +19,5 @@ galaxy_info:
   categories:
   - system
 
-dependencies: []
+dependencies:
+  - antarctica.bas-systems-inventory
