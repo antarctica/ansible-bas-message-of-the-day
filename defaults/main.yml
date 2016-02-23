@@ -1,14 +1,16 @@
 ---
 # Default variables - inventory or playbook overrides will be respected
 
-motd_information_infrastructure_provider: ""
-motd_information_infrastructure_manager: ""
+motd_information_infrastructure_manager: "{{ ansible_local.bas_systems_inventory.compute_resource.manager }}"
+motd_information_infrastructure_provider: "{{ ansible_local.bas_systems_inventory.compute_resource.provider }}"
 
 motd_information_distribution_name: "{{ ansible_distribution }}"
 motd_information_distribution_version: "{{ ansible_distribution_version }}"
 
-motd_information_template_name: "{{ ansible_local.os_template.general.name }}"
-motd_information_template_version: "{{ ansible_local.os_template.general.version }}"
+motd_information_template_name: "{{ ansible_local.bas_systems_inventory.compute_resource.system_image_name }}"
+motd_information_template_version: "{{ ansible_local.bas_systems_inventory.compute_resource.system_image_version }}"
 
-motd_information_systems_inventory_identifer: ""
-motd_information_systems_inventory_resource: ""
+motd_information_systems_inventory_identifer: "{{ ansible_local.bas_systems_inventory.compute_resource.id }}"
+motd_information_systems_inventory_resource: "https://jira.ceh.ac.uk/browse"
+
+motd_information_environment: "{{ ansible_local.bas_systems_inventory.system_instance.environment }}"
