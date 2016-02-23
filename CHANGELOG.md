@@ -7,6 +7,7 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+* Renaming role to fit with new GitHub and Ansible Galaxy structure
 * Role now depends on the `antarctica.bas-systems-inventory` role for providing information to be displayed
 * Some information which was previous provided is now hard-coded as this role is for a specific purpose/context
 * Copyright date increased

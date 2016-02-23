@@ -1,4 +1,4 @@
-# Message Of The Day (`motd`)
+# BAS Message Of The Day (`bas-motd`)
 
 Configures the message of the day shown when logging into a machine
 
@@ -48,7 +48,7 @@ See tests/README.md for more information.
   become: yes
   vars: []
   roles:
-    - BAS.motd
+    - antarctica.bas-motd
 ```
 
 ### Tags
@@ -158,12 +158,12 @@ See our contributing policy for more information.
 
 All changes should be committed, via pull request, to the canonical repository, which for this project is:
 
-`ssh://git@stash.ceh.ac.uk:7999/WSF/ansible-role-message-of-the-day.git`
+`ssh://git@stash.ceh.ac.uk:7999/WSF/ansible-bas-motd.git`
 
 A mirror of this repository is maintained on GitHub. Changes are automatically pushed from the canonical repository to
 this mirror, in a one-way process.
 
-`git@github.com:antarctica/ansible-bas-message-of-the-day.git`
+`git@github.com:antarctica/ansible-bas-motd.git`
 
 Note: The canonical repository is only accessible within the NERC firewall. External collaborators, please make pull 
 requests against the mirrored GitHub repository and these will be merged as appropriate.
