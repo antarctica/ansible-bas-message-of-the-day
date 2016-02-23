@@ -8,6 +8,7 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Added
 
 * Coloured output for Ubuntu machines
+* System Instance environment messages, i.e. 'this machine is in a development environment'
 
 ### Changed
 

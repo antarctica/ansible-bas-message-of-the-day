@@ -1,7 +1,16 @@
 #!/usr/bin/env bash
 
 # Colours for output formatting
+EFBlink='\e[5m'
+EFBlinkReset='\e[25m'
+
+BGRed='\e[41m'
+BGReset='\e[49m'
+
+FGYellow='\e[33m'
+FGGreen='\e[32m'
 FGBlue='\e[34m'
+FGWhite='\e[97m'
 FGreset='\e[39m'
 
 # System details
@@ -15,3 +24,23 @@ printf "\n"
 printf "Machine tracked in the BAS Systems Inventory as '{{ motd_information_systems_inventory_identifer }}'\n"
 printf "See ${FGBlue}{{ motd_information_systems_inventory_resource }}/{{ motd_information_systems_inventory_identifer }}${FGreset} for more information\n"
 printf "\n"
+
+# Environment message
+
+if [ {{ motd_information_environment }} == 'development-local' ]
+then
+  printf "${FGGreen}Development instance (Local) - Manual configuration is A-OK :)${FGreset} \n"
+  printf "\n"
+elif [ {{ motd_information_environment }} == 'development' ]
+then
+  printf "${FGGreen}Development instance - Manual configuration is A-OK :)${FGreset} \n"
+  printf "\n"
+elif [ {{ motd_information_environment }} == 'staging' ]
+then
+  printf "${FGYellow}Staging instance - Manual configuration is frowned upon :/${FGreset} \n"
+  printf "\n"
+elif [ {{ motd_information_environment }} == 'production' ]
+then
+  printf "${BGRed}${FGWhite}${EFBlink}Production instance!${EFBlinkReset} - Manual configuration is strongly frowned upon :(${FGreset}${BGReset} \n"
+  printf "\n"
+fi

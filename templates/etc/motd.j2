@@ -6,3 +6,12 @@
 Machine tracked in the BAS Systems Inventory as '{{ motd_information_systems_inventory_identifer }}'
 See {{ motd_information_systems_inventory_resource }}/{{ motd_information_systems_inventory_identifer }} for more information
 
+{% if motd_information_environment == 'development-local' %}
+Development instance (Local) - Manual configuration is A-OK :)
+{% elif motd_information_environment == 'development' %}
+Development instance - Manual configuration is A-OK :)
+{% elif motd_information_environment == 'staging' %}
+Staging instance - Manual configuration is frowned upon :/
+{% elif motd_information_environment == 'production' %}
+Production instance! - Manual configuration is strongly frowned upon :(
+{% endif %}
