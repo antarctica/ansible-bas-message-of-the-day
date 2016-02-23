@@ -5,6 +5,10 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+### Added
+
+* Coloured output for Ubuntu machines
+
 ### Changed
 
 * Renaming role to fit with new GitHub and Ansible Galaxy structure

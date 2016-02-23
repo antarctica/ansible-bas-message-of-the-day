@@ -1,5 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
+# Colours for output formatting
+FGBlue='\e[34m'
+FGreset='\e[39m'
 
 # System details
 printf "\n"
@@ -10,5 +13,5 @@ printf " * OS Template:        {{ motd_information_template_name }} {{ motd_info
 # BAS Systems Inventory
 printf "\n"
 printf "Machine tracked in the BAS Systems Inventory as '{{ motd_information_systems_inventory_identifer }}'\n"
-printf "See {{ motd_information_systems_inventory_resource }}/{{ motd_information_systems_inventory_identifer }} for more information\n"
+printf "See ${FGBlue}{{ motd_information_systems_inventory_resource }}/{{ motd_information_systems_inventory_identifer }}${FGreset} for more information\n"
 printf "\n"
