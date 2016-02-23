@@ -5,6 +5,8 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+## 0.2.0 - 23/02/2016
+
 ### Added
 
 * Coloured output for Ubuntu machines
