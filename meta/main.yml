@@ -4,7 +4,7 @@ galaxy_info:
   description: Configures the message of the day shown when logging into a machine
   company: British Antarctic Survey
 
-  issue_tracker_url: https://jira.ceh.ac.uk/browse/BASWEB
+  issue_tracker_url: https://jira.ceh.ac.uk/browse/WSF
   license: MIT
   min_ansible_version: 1.8
 
