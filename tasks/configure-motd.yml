@@ -8,6 +8,8 @@
   with_items:
     - "00-header"
     - "10-help-text"
+    - "50-landscape-sysinfo"
+    - "51-cloudguest"
   when: ansible_distribution == "Ubuntu"
 
 - name: create custom message of the day element - Ubuntu

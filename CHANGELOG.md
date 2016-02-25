@@ -5,6 +5,10 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+### Added
+
+* Removal of additional default Ubuntu MOTD elements
+
 ## 0.2.1 - 25/02/2016
 
 ### Fixed
