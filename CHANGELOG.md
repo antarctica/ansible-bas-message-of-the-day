@@ -5,6 +5,10 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+### Fixed
+
+* Switched from deprecated 'categories' to 'galaxy_tags' in role meta
+
 ## 0.2.0 - 23/02/2016
 
 ### Added
